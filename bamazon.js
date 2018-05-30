@@ -13,7 +13,6 @@ const connection = mysql.createConnection({
 
 connection.connect(function(err) {
   if (err) throw err;
-  console.log("connected as id " + connection.threadId);
 });
 
 const getTable = function() {
@@ -71,7 +70,6 @@ let promptID = function(){
           message: "What is the ID of the item you want to buy?"
         }]).then(function(response){
             id = response.userInput;
-            console.log("You said " + id);
             promptQuanity();
       })
 }
@@ -84,7 +82,6 @@ let promptQuanity = function(){
           message: "How many?"
         }]).then(function(response){
             let quanity = response.userInput;
-            console.log("You said " + quanity);
             checkQuanity(id, quanity);
       })
 }

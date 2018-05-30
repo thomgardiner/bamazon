@@ -3,7 +3,7 @@ CREATE DATABASE bamazon;
 
 USE bamazon;
 CREATE TABLE products (
-	id INT(11) NOT NULL,
+	id INT AUTO_INCREMENT NOT NULL,
 	product_name VARCHAR(100),
 	department_name VARCHAR(100),
 	price DECIMAL(11, 2),
